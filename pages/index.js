@@ -14,6 +14,6 @@ export default function Home({ title }) {
 
 export async function getStaticProps() {
   return {
-    props: { title: "bureschkovscy" }, // will be passed to the page component as props
+    props: { title: "bureschcovsky" }, // will be passed to the page component as props
   };
 }
