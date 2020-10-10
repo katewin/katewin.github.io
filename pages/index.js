@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home({ title }) {
   return (
@@ -7,15 +7,13 @@ export default function Home({ title }) {
         <title>bureschcovsky</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        {title}
-      </div>
+      <div>{title}</div>
     </>
-  )
+  );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: { title: "bureschkovscy" }, // will be passed to the page component as props
-  }
+  };
 }
