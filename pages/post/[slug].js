@@ -1,11 +1,14 @@
 import matter from "gray-matter";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 export default function PostTemplate({ content, data }) {
   const frontmatter = data;
   return (
     <>
       <h1>{frontmatter.title}</h1>
-      <p>{content}</p>
+      {frontmatter.date}
+      <ReactMarkdown plugins={[gfm]}>{content}</ReactMarkdown>
     </>
   );
 }
